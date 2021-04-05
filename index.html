@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Muhammad Ismail</title>
+    
     <meta charset="UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +15,8 @@
 
     <link rel="stylesheet" type="text/css" href="default.css">
 
-    <title>Muhammad Ismail</title>
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
+
 </head>
 <body>
 
@@ -42,10 +45,10 @@
                     <h5 style="text-align: center; line-height: 0;">Personalise The Theme</h5>
 
                     <div id="theme-options-wrapper">
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="purple-mode" class="theme-dot"></div>
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
                     </div>
 
                     <p id="settings-note">Theme settings will be saved for <br>your next visit</p>
@@ -69,21 +72,118 @@
 
     <section class="s2">
         <div class="main-container">
-            About
-        </div>
+            <div class="about-wrapper">
+				<div class="about-me">
+					<h4>About me</h4>
+
+                    <p>Hi, Muhammad here!</p> 
+                    <p>I've recently completed a Full stack web developer course and am looking for a graduate web developer role.</p>
+					<p>My main language of interest is Python and the Django framework. Whilst Job searching, I am also currently learning react.</p>
+
+					<hr>
+
+					<h4>TOP EXPERTISE</h4>
+
+					<p>Fullstack developer with primary focus on Django: <a target="_blank" href="Muhammad Ismail CV.pdf">Download Resume</a></p>
+
+					<div id="skills">
+						<ul>
+							<li>Python</li>
+							<li>Django</li>
+							<li>JavaScript</li>
+							<li>Flask</li>
+						</ul>
+						<ul>
+                            <li>Postgres</li>
+							<li>AWS (RDS/S3)</li>
+							<li>Heroku</li>
+							<li>HTML/CSS</li>
+						</ul>
+					</div>
+				</div>
+
+				
+				<div class="social-links">
+					<img id="social_img" src="images/follow.jpg">
+                    <h3>Find me on LinkedIn and Twitter</h3>
+                    
+                    <a target="_blank" href="https://www.linkedin.com/in/muhammadi-ismail/">LinkedIn: MuhammadI-Ismail</a>
+
+					<br>
+					<a target="_blank" href="https://twitter.com/IrfanIsmail89">Twitter: @IrfanIsmail89</a>
+				</div>
+			</div>
+		</div>
     </section>
 
     <section class="s1">
-        <div class="main-container">
-            Portfolio
-        </div>
+<div class="main-container">
+			<h3 style="text-align: center;">Examples of my porject work</h3>
+
+			<div class="post-wrapper">
+
+				<div>
+					<div class="post">
+						<img class="thumbnail" src="images/dash.jpg">
+						<div class="post-preview">
+							<h6 class="post-title">Football club website</h6>
+							<p class="post-intro">A football club website with a store, a news, a match report and a contact us section. The site comes with full authentication and restrictions to user privileges.</p>
+							<a href="https://club-football.herokuapp.com/">View site</a>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="post">
+						<img class="thumbnail" src="images/ecom.jpg">
+						<div class="post-preview">
+							<h6 class="post-title">Pharmacy search tool</h6>
+							<p class="post-intro">A search tool that allows the user to store resources, edit and delete them as needed. Also contains an authentication system.</p>
+							<a href="http://pharmacy-search.herokuapp.com/">View Site</a>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="post">
+						<img class="thumbnail" src="images/membership site.jpg">
+						<div class="post-preview">
+							<h6 class="post-title">Adult Vancomycin initiation tool </h6>
+							<p class="post-intro">A complex dosing calculator on a toxic drug. Is currently being trialled in an NHS Hospital.</p>
+							<a href="https://mismiles.github.io/project-clinical-calculator/">View Site</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     </section>
 
     <section class="s2">
         <div class="main-container">
-            Contact
-        </div>
+			<a href=""></a>
+			<h3 style="text-align: center;">Contact me</h3>
+
+			<form id="contact-form">
+				<a name="contact"></a>
+
+				<label>Name</label>
+				<input class="input-field" type="text" name="name">
+
+				<label>Subject</label>
+				<input class="input-field" type="text" name="subject">
+
+				<label>Email</label>
+				<input class="input-field" type="text" name="email">
+
+				<label>Message</label>
+				<textarea class="input-field" name="message"></textarea>
+
+				<input id="submit-btn" type="submit" value="Send">
+			</form>
+		</div>
     </section>
     
+    <script type="text/javascript" src="styleChange.js"></script>
+
 </body>
 </html>
