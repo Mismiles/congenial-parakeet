@@ -46,12 +46,13 @@ ul{
 	list-style: none;
 }
 
-h1 { font-size: 56px;}
-h2 { font-size: 36px;}
-h3 { font-size: 28px;}
-h4 { font-size: 24px;}
-h5 { font-size: 20px;}
-h6 { font-size: 16px;}
+
+h1{ font-size: 56px;}
+h2{ font-size: 40px;}
+h3{ font-size: 30px;}
+h4{ font-size: 26px;}
+h5{ font-size: 22px;}
+h6, p{ font-size: 18px;}
 
 .s1{
     background-color: var(--mainColor);
@@ -204,7 +205,7 @@ h6 { font-size: 16px;}
 }
 
 #settings-note{
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
     text-align: center;
 
@@ -281,6 +282,11 @@ h6 { font-size: 16px;}
 	display: grid;
 	align-content: center;
 	text-align: center;
+}
+
+/* Hover effect for social media icons */
+.fa:hover {
+  opacity: 0.7;
 }
 
 #social_img{
