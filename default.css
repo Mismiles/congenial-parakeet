@@ -315,6 +315,7 @@ h6, p{ font-size: 18px;}
 	object-fit: cover;
 }
 
+
 .post-preview{
 	background-color: #fff;
 	padding:15px;
@@ -328,6 +329,16 @@ h6, p{ font-size: 18px;}
 .post-intro{
 	color:#4b5156;
 	font-size: 14px;
+}
+
+.post:hover {
+    position:relative;
+    top:-25px;
+    left:-35px;
+    width:500px;
+    height:auto;
+    display:block;
+    z-index:999;
 }
 
 #contact-form{
