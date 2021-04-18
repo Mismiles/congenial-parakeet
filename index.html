@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <title>Muhammad Ismail</title>
+
+    <base target="_top">
     
     <meta charset="UTF-8">
     
@@ -180,7 +182,7 @@
 				<a name="contact"></a>
 
 				<label>Name</label>
-				<input class="input-field" type="text" name="name">
+				<input class="input-field form-data" type="text" name="name">
 
 				<label>Subject</label>
 				<input class="input-field" type="text" name="subject">
@@ -191,12 +193,12 @@
 				<label>Message</label>
 				<textarea class="input-field" name="message"></textarea>
 
-				<input id="submit-btn" type="submit" value="Send">
+				<button id="submit-btn"  onclick="SubForm()">Submit</button>
 			</form>
-		</div>
+        </div>
     </section>
     
-    <script type="text/javascript" src="styleChange.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 
 </body>
 </html>

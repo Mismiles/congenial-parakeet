@@ -38,3 +38,17 @@ function setTheme(mode){
 
 	localStorage.setItem('theme', mode)
 }
+
+function SubForm (){
+    fetch("https://api.apispreadsheets.com/data/11067/", {
+        method: "POST",
+        body: JSON.stringify({"data": {"Name":"","Email":"","Message":"","Subject":""}}),
+    }).then(res =>{
+        if (res.status === 201){
+            // SUCCESS
+        }
+        else{
+            // ERROR
+        }
+    })
+}
