@@ -1,5 +1,3 @@
-console.log("It's working")
-
 let theme = localStorage.getItem('theme')
 
 if(theme == null){
@@ -37,18 +35,4 @@ function setTheme(mode){
 	}
 
 	localStorage.setItem('theme', mode)
-}
-
-function SubForm (){
-    fetch("https://api.apispreadsheets.com/data/11067/", {
-        method: "POST",
-        body: JSON.stringify({"data": {"Name":"","Email":"","Message":"","Subject":""}}),
-    }).then(res =>{
-        if (res.status === 201){
-            "Form submitted successfully"
-        }
-        else{
-            "Error, please resubmit form"
-        }
-    })
 }

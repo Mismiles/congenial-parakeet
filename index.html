@@ -13,9 +13,28 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
+    <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/11067/",
+				type:"post",
+				data:$("#contact-form").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+
     <!-- Icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
     <link rel="stylesheet" type="text/css" href="default.css">
 
@@ -182,19 +201,19 @@
 				<a name="contact"></a>
 
 				<label>Name</label>
-				<input class="input-field form-data" type="text" name="name">
+				<input class="input-field form-data" type="text" name="Name">
 
 				<label>Subject</label>
-				<input class="input-field" type="text" name="subject">
+				<input class="input-field" type="text" name="Subject">
 
 				<label>Email</label>
-				<input class="input-field" type="text" name="email">
+				<input class="input-field" type="text" name="Email">
 
 				<label>Message</label>
-				<textarea class="input-field" name="message"></textarea>
+                <input class="input-field" name="Message"></input>
 
-				<button id="submit-btn"  onclick="SubForm()">Submit</button>
-			</form>
+                <input type="submit" value="Submit" id="submit-btn" onclick="SubForm()">Submit</input>
+            </form>
         </div>
     </section>
     
