@@ -45,10 +45,10 @@ function SubForm (){
         body: JSON.stringify({"data": {"Name":"","Email":"","Message":"","Subject":""}}),
     }).then(res =>{
         if (res.status === 201){
-            // SUCCESS
+            "Form submitted successfully"
         }
         else{
-            // ERROR
+            "Error, please resubmit form"
         }
     })
 }
