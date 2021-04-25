@@ -13,25 +13,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-    <script
-		src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous"></script>
-	<script>
-		function SubForm (){
-			$.ajax({
-				url:"https://api.apispreadsheets.com/data/11067/",
-				type:"post",
-				data:$("#contact-form").serializeArray(),
-				success: function(){
-					alert("Form Data Submitted :)")
-				},
-				error: function(){
-					alert("There was an error :(")
-				}
-			});
-		}
-	</script>
 
     <!-- Icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -218,6 +199,22 @@
     </section>
     
     <script type="text/javascript" src="script.js"></script>
+
+	<script>
+		function SubForm (){
+			fetch("https://api.apispreadsheets.com/data/11067/", {
+            method: "POST",
+            body: JSON.stringify({"data": {"Name":"","Subject":"","Email":"","Message":""}}),
+        }).then(res =>{
+            if (res.status === 201){
+                alert("Form Submitted!")
+            }
+            else{
+                alert("Try Again!")
+            }
+        })
+	                    }
+	</script>
 
 </body>
 </html>
