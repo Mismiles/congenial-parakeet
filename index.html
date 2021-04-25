@@ -178,43 +178,40 @@
 			<a href=""></a>
 			<h3 style="text-align: center;">Contact me</h3>
 
-			<form id="contact-form">
+			<form name="submit-to-google-sheet" id="contact-form">
 				<a name="contact"></a>
 
 				<label>Name</label>
-				<input class="input-field form-data" type="text" name="Name">
+				<input class="input-field form-data" type="text" name="Name" placeholder="Full name" required>
 
 				<label>Subject</label>
-				<input class="input-field" type="text" name="Subject">
+				<input class="input-field" type="text" name="Subject" placeholder="Enter a subject" required>
 
 				<label>Email</label>
-				<input class="input-field" type="text" name="Email">
+				<input class="input-field" name="Email" type="email" placeholder="Email" required>
 
 				<label>Message</label>
-                <input class="input-field" name="Message"></input>
+                <input class="input-field" name="Message" type="text" placeholder="Enter a message" required></input>
 
-                <input type="submit" value="Submit" id="submit-btn" onclick="SubForm()"></input>
+                <input type="submit" id="submit-btn"></input>
             </form>
         </div>
     </section>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw13oBNCKGXvvmI-Qv9QAojU_6ZBC9ToqoidBocqjNhYb67mfg7qD5Rgiutst_qhaj8/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thank you, I'll try to contact you soon!", response,))
+        .catch(error => alert('Error, please try again!', error.message))
+    })
+    </script>
+
     
     <script type="text/javascript" src="script.js"></script>
-
-	<script>
-		function SubForm (){
-			fetch("https://api.apispreadsheets.com/data/11067/", {
-            method: "POST",
-            body: JSON.stringify({"data": {"Name":"","Subject":"","Email":"","Message":""}}),
-        }).then(res =>{
-            if (res.status === 201){
-                alert("Form Submitted!")
-            }
-            else{
-                alert("Try Again!")
-            }
-        })
-	                    }
-	</script>
 
 </body>
 </html>
