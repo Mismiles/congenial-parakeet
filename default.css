@@ -167,6 +167,7 @@ h6, p{ font-size: 18px;}
 #theme-options-wrapper{
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .theme-dot{
@@ -234,7 +235,7 @@ h6, p{ font-size: 18px;}
     border: 1.5px solid #17a2b8;
     background-color: var(--previewbg);
     padding: 15px;
-    position: relative;
+    position: absolute;
 }
 
 .corner{
